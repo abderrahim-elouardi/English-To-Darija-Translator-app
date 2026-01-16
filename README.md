@@ -1,1 +1,1 @@
-# English-To-Darija-Extension
+# English-To-Darija
