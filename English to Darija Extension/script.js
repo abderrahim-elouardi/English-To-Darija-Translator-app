@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded",()=>{
 
+
+
+
 const startSpeech = document.getElementById("recordBtn");
 const result = document.getElementById("originalText");
 
@@ -31,6 +34,20 @@ recognition.onerror = (event) => {
 };
 
 transformBtn.addEventListener('click', async function() {
+    username = localStorage.getItem('username');
+    password = localStorage.getItem('password');
+
+
+    // Étape 1 : Créer la combinaison avec les deux points
+    const rawString = username + ":" + password; 
+
+    // Étape 2 : Encoder en Base64
+    const authString = btoa(rawString);
+
+    if (!username || !password) {
+        alert("Veuillez vous connecter d'abord.");
+        return;
+    }
     const textToTranslate = result.value;
     
     try {
@@ -39,7 +56,8 @@ transformBtn.addEventListener('click', async function() {
         const response = await fetch(url, {
             method: 'GET',
             headers: {
-                'Accept': 'application/json'
+                'Accept': 'application/json',
+                'Authorization': `Basic ${authString}`
             }
         });
 
@@ -51,8 +69,7 @@ transformBtn.addEventListener('click', async function() {
 
     } catch (error) {
         console.error('Erreur:', error);
-        resultatDiv.innerText = "Erreur lors de la traduction.";
-        resultatDiv.style.color = "red";
+        
     }
 
     async function getSelectedTextFromWebPage() {
@@ -76,12 +93,12 @@ transformBtn.addEventListener('click', async function() {
         console.error("Erreur de récupération:", error);
         return "Erreur technique";
     }
-
-
-    
+   
 }
+});
 
-
-});        
+document.getElementById("login").addEventListener("click", async () => {
+    window.location.href = "login.html";    
+})
 
 })

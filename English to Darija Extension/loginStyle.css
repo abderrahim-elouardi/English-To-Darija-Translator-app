@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8fafc 0%, #dbeafe 50%, #e0e7ff 100%);
+}
+
+.auth-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+.tab-container {
+    display: flex;
+    border-bottom: 1px solid #e5e7eb;
+    background: #f9fafb;
+}
+
+.tab-input {
+    display: none;
+}
+
+.tab-label {
+    flex: 1;
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    background: transparent;
+}
+
+.tab-label:hover {
+    color: #374151;
+}
+
+#login-tab:checked ~ .tab-container .tab-label[for="login-tab"],
+#signup-tab:checked ~ .tab-container .tab-label[for="signup-tab"] {
+    color: #0f172a;
+    background: white;
+}
+
+#login-tab:checked ~ .tab-container .tab-label[for="login-tab"]::after,
+#signup-tab:checked ~ .tab-container .tab-label[for="signup-tab"]::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #0f172a;
+}
+
+.form-container {
+    padding: 32px;
+}
+
+.login-form {
+    display: none;
+}
+
+.signup-form {
+    display: none;
+}
+
+#login-tab:checked ~ .form-container .login-form {
+    display: block;
+}
+
+#signup-tab:checked ~ .form-container .signup-form {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.2s;
+    background: white;
+    color: #0f172a;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.input:invalid:not(:placeholder-shown) {
+    border-color: #ef4444;
+}
+
+.input:invalid:not(:placeholder-shown):focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.input-with-icon {
+    padding-right: 40px;
+}
+
+.eye-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+    width: 24px;
+    height: 24px;
+}
+
+.eye-toggle:hover {
+    color: #374151;
+}
+
+.eye-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.password-toggle:checked ~ .input-wrapper .eye-open {
+    display: none;
+}
+
+.password-toggle:checked ~ .input-wrapper .eye-closed {
+    display: block;
+}
+
+.password-toggle:not(:checked) ~ .input-wrapper .eye-open {
+    display: block;
+}
+
+.password-toggle:not(:checked) ~ .input-wrapper .eye-closed {
+    display: none;
+}
+
+.password-toggle {
+    display: none;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+    accent-color: #0f172a;
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: #374151;
+    cursor: pointer;
+    user-select: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px 16px;
+    background: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.submit-btn:hover {
+    transform: scale(1.02);
+    background: #1e293b;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        max-width: 100%;
+    }
+    
+    .form-container {
+        padding: 24px;
+    }
+}
