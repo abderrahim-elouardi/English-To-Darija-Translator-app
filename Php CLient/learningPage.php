@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Darija</title>
-    <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/png" href="icon128.png">
+    <link rel="stylesheet" href="learningPage.css">
 </head>
 <body>
     <div class="container">
@@ -50,7 +50,7 @@
             </button>
         </div>
     </div>
-        <script src="./script.js"></script>
-        <script src="./content.js"></script>
+
+    <script src="learningPage.js"></script>
 </body>
 </html>

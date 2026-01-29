@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authentication Card</title>
-    <link rel="stylesheet" href="loginStyle.css">
+    <title>To Darija - Authentication</title>
     <link rel="icon" type="image/png" href="icon128.png">
+    <link rel="stylesheet" href="loginPage.css">
 </head>
 <body>
     <div class="auth-card">
@@ -40,7 +40,7 @@
                             id="login-password"
                             class="input input-with-icon" 
                             placeholder="Enter your password"
-                            
+                            required
                         >
                         <label for="toggle-login-password" class="eye-toggle">
                             <svg class="eye-icon eye-open" fill="none" stroke="currentColor" viewBox="0 0 24 24">

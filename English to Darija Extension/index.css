@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #a42f1e;
+    --secondary: #1e5a4a;
+    --gold: #d4a574;
+    --sand: #faf8f3;
+    --dark: #1a1a1a;
+    --border: #e5d9cc;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background: linear-gradient(135deg, var(--sand) 0%, #f5ede2 100%);
+    color: var(--dark);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Moroccan geometric pattern background */
+.pattern-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.05;
+    pointer-events: none;
+    background-image: 
+        repeating-linear-gradient(45deg, transparent, transparent 100px, var(--primary) 100px, var(--primary) 101px),
+        repeating-linear-gradient(-45deg, transparent, transparent 100px, var(--secondary) 100px, var(--secondary) 101px);
+}
+
+/* Subtle gradient blobs */
+.gradient-blob-1 {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(164, 47, 30, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+}
+
+.gradient-blob-2 {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(30, 90, 74, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+}
+
+/* Main container */
+.container {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Header accent badge */
+.accent-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: rgba(30, 90, 74, 0.1);
+    border: 1px solid rgba(30, 90, 74, 0.2);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 32px;
+}
+
+/* Main title */
+h1 {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.title-base {
+    color: var(--dark);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.title-gradient {
+    display: block;
+    background: linear-gradient(135deg, var(--primary) 0%, #c41e3a 50%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-top: 8px;
+}
+
+/* Subtitle */
+p {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    color: #6b5b4a;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 48px;
+}
+
+/* Buttons container */
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 48px;
+}
+
+@media (min-width: 640px) {
+    .buttons-container {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        width: auto;
+    }
+}
+
+/* Buttons */
+button {
+    position: relative;
+    padding: 18px 32px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+    min-width: 200px;
+}
+
+@media (min-width: 640px) {
+    button {
+        padding: 20px 40px;
+        min-width: auto;
+    }
+}
+
+/* Primary button - Get Started */
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(164, 47, 30, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(164, 47, 30, 0.35);
+}
+
+.btn-primary:active {
+    transform: scale(0.95);
+}
+
+.btn-primary svg {
+    transition: transform 0.3s ease;
+    width: 20px;
+    height: 20px;
+}
+
+.btn-primary:hover svg {
+    transform: translateX(4px);
+}
+
+/* Secondary button - Login */
+.btn-secondary {
+    background-color: white;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    box-shadow: 0 4px 15px rgba(30, 90, 74, 0.1);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(30, 90, 74, 0.05);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(30, 90, 74, 0.2);
+}
+
+.btn-secondary:active {
+    transform: scale(0.95);
+}
+
+.btn-secondary svg {
+    transition: transform 0.3s ease;
+    width: 20px;
+    height: 20px;
+}
+
+.btn-secondary:hover svg {
+    transform: translateX(4px);
+}
+
+/* Footer text */
+.footer-text {
+    border-top: 1px solid var(--border);
+    padding-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #6b5b4a;
+}
+
+.divider {
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .divider {
+        display: inline;
+    }
+}
+
+/* SVG icon styling */
+svg {
+    stroke: currentColor;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+}

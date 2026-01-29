@@ -61,11 +61,14 @@ transformBtn.addEventListener('click', async function() {
         if (!response.ok) throw new Error('Erreur réseau ou API');
 
         const data = await response.json();
+        console.log(data);
+        
         
         document.getElementById('transformedText').innerText = data.darijaText
 
     } catch (error) {
         console.error('Erreur:', error);
+        
         
     }
 
@@ -95,16 +98,9 @@ transformBtn.addEventListener('click', async function() {
 });
 
 document.getElementById("login").addEventListener("click", async () => {
-    window.location.href = "login.html";    
+    window.location.href = "loginPage.php";  
 })
 
 
-// // Écouter les messages venant du content script
-// chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-//     if (message.type === "TEXT_SELECTED") {
-//         console.log(message.text);
-//         result.value = message.text;
-//     }
-// });
 
 })

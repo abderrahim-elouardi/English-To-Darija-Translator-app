@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             localStorage.setItem('username', username)
             localStorage.setItem('password', password)
             alert("Credentials saved!")
-            window.location.href = "index.html"; 
+            window.location.href = "learningPage.php"; 
         }
         
     })
