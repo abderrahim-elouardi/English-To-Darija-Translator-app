@@ -2,6 +2,14 @@
 
 Ce projet est une solution complète de traduction capable de convertir n'importe quelle langue vers le **Darija (Arabe Marocain)**. L'application repose sur une architecture découplée avec un backend robuste en Java et un frontend dynamique en PHP, utilisant l'intelligence artificielle de Google Gemini.
 
+## 📺 Démonstration Vidéo
+
+Découvrez l'application en action (interface, processus d'authentification et exemples de traduction vers le Darija) :
+
+[![Regarder la vidéo](https://drive.google.com/file/d/1Flx6S7A36Gw12M2xqkJcwoxotboCaRso/view?usp=sharing)
+
+> *Si vous n'avez pas de lien YouTube, vous pouvez aussi insérer un GIF de démonstration ici.*
+
 ## 🚀 Architecture du Projet
 
 Le projet est divisé en deux composants principaux :
