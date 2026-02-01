@@ -6,7 +6,7 @@ Ce projet est une solution complète de traduction capable de convertir n'import
 
 Découvrez l'application en action (interface, processus d'authentification et exemples de traduction vers le Darija) :
 
-https://drive.google.com/file/d/1Flx6S7A36Gw12M2xqkJcwoxotboCaRso/view?usp=sharing
+[![Démonstration To Darija Translator](https://img.youtube.com/vi/iC6berMWhGo/maxresdefault.jpg)](https://www.youtube.com/watch?v=iC6berMWhGo)
 
 
 
