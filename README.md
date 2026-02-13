@@ -33,7 +33,7 @@ Le projet est divisé en deux composants principaux :
 * **Maven :** Gestion des dépendances.
 
 ### Intelligence Artificielle (Moteur de Traduction)
-* **OpenRouter API :** Interface de communication avec le modèle **Google Gemini**.
+* **OpenRouter API :** Interface de communication avec le modèle **DeepSeek**.
 * **Prompt Engineering :** Optimisé pour capturer les nuances et le dialecte spécifique du Darija marocain.
 
 ### Frontend
